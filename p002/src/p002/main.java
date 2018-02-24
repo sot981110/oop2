@@ -55,23 +55,48 @@ public class main {
 		
 		double[] a = new double[10];
 		
+		//Hf 1.
+		
+		Double e = (double) 0;
+		for (int i = 0; i < 20; i++) {
+			e +=(double) 1/(factorr(i));
+		}
+		System.out.print("e = ");
+		System.out.println(e);
+		
+		//Hf 2.
+		
+		for (int i = 1; i < 100; i++) {
+			for (int j = i; j < 100; j++) {
+				if((Math.sqrt((i*i)+(j*j))%1) == 0 && (Math.sqrt((i*i)+j*j)) <=100){
+					System.out.print(i);
+					System.out.print(' ');
+					System.out.print(j);
+					System.out.print(' ');
+					System.out.println((int)(Math.sqrt((i*i)+(j*j))));
+				}
+			}
+		}
 		
 	}
 	//2. feladat
-	private static int factor(int x){
-		int f = 1;
+	private static long factor(int x){
+		if(x == 0){
+			return 1;
+		}
+		long f = 1;
 		for(; x > 0;x--){
-			f *= x; 
+			f *=(long) x; 
 		}
 		return f;
 	}
 	//2.feladat
-	private static int factorr(int x){
-		if(x == 1){
+	private static long factorr(int x){
+		if(x == 1 || x == 0){
 			return 1;
 		}
 		else{
-			return x*factorr(x-1);
+			return (long) x*factorr(x-1);
 		}
 	}
 	//3.feladat
@@ -111,4 +136,5 @@ public class main {
 		//TODO
 		return false;
 	}
+	
 }
