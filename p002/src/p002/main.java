@@ -61,7 +61,7 @@ public class main {
 		for (int i = 0; i < 20; i++) {
 			e +=(double) 1/(factorr(i));
 		}
-		System.out.print("e = ");
+		System.out.print(" e = ");
 		System.out.println(e);
 		
 		//Hf 2.
@@ -79,6 +79,7 @@ public class main {
 		}
 		
 	}
+	
 	//2. feladat
 	private static long factor(int x){
 		if(x == 0){
