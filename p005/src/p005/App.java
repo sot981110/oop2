@@ -2,6 +2,8 @@ package p005;
 
 import java.util.Random;
 
+import p006.Employee;
+
 public class App {
 
 	public static void main(String[] args) {
