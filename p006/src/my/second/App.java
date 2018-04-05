@@ -1,6 +1,7 @@
 package my.second;
 
 import java.util.Random;
+import my.first.Number;
 
 public class App {
 
