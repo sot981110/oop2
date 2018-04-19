@@ -2,6 +2,8 @@ package p003;
 
 import java.util.Scanner;
 
+import exception.DivisionByZeroException;
+
 public class App {
 
 	public static void main(String[] args) {
@@ -20,7 +22,11 @@ public class App {
 			firstnumber = Double.parseDouble(calculation.split(" ")[0]);
 			secondnumber = Double.parseDouble(calculation.split(" ")[2]);
 			operator = calculation.split(" ")[1];
-			Util.calculate(operator, firstnumber, secondnumber);
+			try {
+				Util.calculate(operator, firstnumber, secondnumber);
+			} catch (DivisionByZeroException e) {
+				e.printStackTrace();
+			}
 
 		}
 		scanner.close();

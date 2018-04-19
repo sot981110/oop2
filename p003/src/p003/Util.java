@@ -1,8 +1,10 @@
 package p003;
 
+import exception.DivisionByZeroException;
+
 public class Util {
 	
-	public static void calculate(String operator, Double firstnumber, Double secondnumber){
+	public static void calculate(String operator, Double firstnumber, Double secondnumber) throws DivisionByZeroException,IllegalArgumentException{
 		
 		System.out.print("Result: ");
 		
@@ -17,7 +19,7 @@ public class Util {
 		
 		case "/":
 			if(secondnumber == 0){
-				System.out.println("Can't divide by 0.");
+				throw new DivisionByZeroException();
 			}
 			else{
 				System.out.println(firstnumber / secondnumber);
@@ -29,8 +31,7 @@ public class Util {
 			break;
 		
 		default:
-			System.out.println("Not included calculation");
-			break;
+			throw new IllegalArgumentException();
 		}
 		
 		return;
